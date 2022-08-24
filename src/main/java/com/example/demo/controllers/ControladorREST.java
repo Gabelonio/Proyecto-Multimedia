@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entities.Usuario;
@@ -18,6 +19,12 @@ public class ControladorREST{
 	
 	@Autowired
 	private IUsuarioService usuarioService;
+	
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+      return "Hello World!";
+    }
 	
 	@GetMapping("/login/{id}/{pass}")
 	private Usuario validateLogin(@PathVariable Long id, 

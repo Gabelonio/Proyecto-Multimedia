@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entities.Usuario;
+import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.services.IUsuarioService;
 
 @RequestMapping("/API")
@@ -20,7 +21,7 @@ public class ControladorREST{
 	
 	@GetMapping("/login/{id}/{pass}")
 	private Usuario validateLogin(@PathVariable Long id, 
-								  @PathVariable String pass){
+								  @PathVariable String pass) throws ResourceNotFoundException{
 		if(usuarioService.findUserById(id).isEmpty()) {
 			return null;
 		}

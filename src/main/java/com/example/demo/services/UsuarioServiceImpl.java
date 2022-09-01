@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.DAO.IUsuarioDAO;
 import com.example.demo.entities.Usuario;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,6 +23,11 @@ public class UsuarioServiceImpl implements IUsuarioService{
 	@Override
 	public Usuario saveUser(Usuario user) {
 		return usuarioDao.save(user);
+	}
+
+	@Override
+	public List<Usuario> findAll() {
+		return (List<Usuario>) usuarioDao.findAll();
 	}
 	
 }

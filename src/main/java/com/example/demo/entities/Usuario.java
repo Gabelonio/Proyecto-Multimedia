@@ -19,37 +19,37 @@ public class Usuario implements Serializable{
 	
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name =  "\"documento\"")
+	@Column(name = "documento")
 	private Long documento;
 	
-	@Column(name = "\"primerApellido\"")
+	@Column(name = "primerApellido")
 	private String primerApellido;
 	
-	@Column(name = "\"primerNombre\"")
+	@Column(name = "primerNombre")
 	private String primerNombre;
 
-	@Column(name = "\"sexo\"")
+	@Column(name = "sexo")
 	private String sexo;
 	
-	@Column(name = "\"correo\"")
+	@Column(name = "correo")
 	private String correo;
 	
-	@Column(name = "\"celular\"")
+	@Column(name = "celular")
 	private String celular;
 	
-	@Column(name = "\"clave\"")
+	@Column(name = "clave")
 	private String clave;
 	
-	@Column(name = "\"rol\"")
+	@Column(name = "rol")
 	private String rol;
 	
-	@Column(name = "\"fechaRegistro\"")
+	@Column(name = "fechaRegistro")
 	private Date fechaRegistro;
 	
-	@Column(name="\"fechaActualizacion\"")
+	@Column(name="fechaActualizacion")
 	private Date fechaActualizacion;
 	
-	@Column(name = "\"fechaUltimaSesion\"")
+	@Column(name = "fechaUltimaSesion")
 	private Date fechaUltimaSesion;
 	
 	@PrePersist
